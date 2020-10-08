@@ -1,0 +1,53 @@
+<configuration>
+    <property>
+        <name>fs.default.name</name>
+        <value>hdfs://hdfs-namenode:9000</value>
+        <description>For YARN this configuration variable is called fs.defaultFS.</description>
+    </property>
+    <property>
+      <name>hive.metastore.warehouse.dir</name>
+      <value>/user/hive/warehouse</value>
+      <description>資料儲存目錄，預設位置在 HDFS 上面的 /user/hive/warehouse 路徑下
+    </description>
+    
+    </property>
+    <property>
+       <name>hive.exec.scratchdir</name>
+       <value>/tmp/hive</value>
+       <description>資料臨時文件目錄，預設位置為 HDFS 上面的 /tmp/hive 路徑下</description> 
+    </property>
+    <property>
+		<name>javax.jdo.option.ConnectionURL</name>
+		<value>jdbc:mysql://localhost/metastore?createDatabaseIfNotExist=true&amp;useSSL=false</value>
+		<description>metadata is stored in a MySQL server</description>
+	</property>
+	<property>
+		<name>javax.jdo.option.ConnectionDriverName</name>
+		<value>com.mysql.jdbc.Driver</value>
+		<description>MySQL JDBC driver class</description>
+	</property>
+	<property>
+		<name>javax.jdo.option.ConnectionUserName</name>
+		<value>hive</value>
+		<description>user name for connecting to mysql server</description>
+	</property>
+	<property>
+		<name>javax.jdo.option.ConnectionPassword</name>
+		<value>hive</value>
+		<description>password for connecting to mysql server</description>
+	</property>
+
+
+  <property>
+    <name>hive.metastore.uris</name>
+    <value>thrift://hiveip:9083</value>
+  </property>
+
+  <property>
+    <name>hive.execution.engine</name>
+    <value>mr</value>
+    <description>
+      Expects one of [mr, tez, spark].
+      Chooses execution engine. Options are: mr (Map reduce, default)</description>
+  </property>
+</configuration>

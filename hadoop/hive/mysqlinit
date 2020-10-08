@@ -1,0 +1,9 @@
+(old way: without schematool)
+mysql -u root <<MY_QUERY
+CREATE USER 'hive'@'%' IDENTIFIED BY 'hive'; 
+GRANT all on *.* to 'hive'@localhost identified by 'hive';
+flush privileges;
+CREATE DATABASE metastore;
+USE metastore;
+SOURCE /opt/apache-hive-2.3.4-bin/scripts/metastore/upgrade/mysql/hive-schema-2.3.0.mysql.sql;
+MY_QUERY
