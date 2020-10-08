@@ -15,8 +15,7 @@ Note: Run below commands from the directory where `docker-compose.yml` file is p
 `docker-compose start`
 ## remove containers
 `docker-compose rm -f`
-## to scale HDFS datanode or Spark worker containers
-`docker-compose up --scale hdfs-datanode=n` where n is the new number of containers.
+
 
 ## Attaching to cluster containers
   - HDFS NameNode container
