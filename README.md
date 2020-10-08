@@ -3,7 +3,7 @@
 # Docker compose for spawning on demand HDFS cluster
 
 # Build the required Docker images
-`./build-images.sh`
+`./build-images.sh`  
 `docker-compose build`
 
 # Run the cluster
