@@ -4,6 +4,7 @@
 
 # Build the required Docker images
 `./build-images.sh`
+`docker-compose build`
 
 # Run the cluster
 Note: Run below commands from the directory where `docker-compose.yml` file is present.
